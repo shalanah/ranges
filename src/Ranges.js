@@ -241,9 +241,9 @@ const Track = styled.div`
 const Slider = ({
   onDragEnd,
   onDragStart,
-  onChange,
+  onChange1,
   onChange2,
-  value,
+  value1,
   value2,
   max,
   min,
@@ -286,8 +286,8 @@ const Slider = ({
 
   // const className = isDragging ? "grabbing" : "";
   const transform = `translateX(${
-    (Math.min(value, value2) / (max - min)) * 100
-  }%) scaleX(${Math.abs(value2 - value) / (max - min)})`;
+    (Math.min(value1, value2) / (max - min)) * 100
+  }%) scaleX(${Math.abs(value2 - value1) / (max - min)})`;
   return (
     <Container style={style}>
       <Input
@@ -300,8 +300,8 @@ const Slider = ({
         min={min}
         max={max}
         step={step}
-        defaultValue={value}
-        onChange={onChange}
+        defaultValue={value1}
+        onChange={onChange1}
       />
       <Input2
         ref={ref2}

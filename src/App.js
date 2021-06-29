@@ -13,7 +13,7 @@ export default function App() {
   const [value0, setValue0] = useState(3);
   const onChange0 = (e) => {
     const v = Number(e.target.value);
-    setValue(v);
+    setValue0(v);
   };
   const [value1, setValue1] = useState(3);
   const onChange1 = (e) => {
@@ -38,7 +38,6 @@ export default function App() {
       <Global />
       <Slider
         style={{ margin: "auto" }}
-        // {...sliderProps}
         // disabled={disabled}
         // onDragStart={onDragStart}
         // onDragEnd={onDragEnd}
@@ -50,16 +49,15 @@ export default function App() {
       />
       <Ranges
         style={{ margin: "auto" }}
-        // {...sliderProps}
         // disabled={disabled}
         // onDragStart={onDragStart}
         // onDragEnd={onDragEnd}
-        value={value1}
+        value1={value1}
         value2={value2}
         min={0}
         max={20}
         step={1}
-        onChange={onChange1}
+        onChange1={onChange1}
         onChange2={onChange2}
       />
     </div>
